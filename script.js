@@ -41,7 +41,7 @@ const scene = new THREE.Scene();
 
 // Perspective camera for 3D rendering.
 const camera3D = new THREE.PerspectiveCamera(
-  75,
+  85,
   window.innerWidth / window.innerHeight,
   0.1,
   2000
@@ -97,7 +97,7 @@ const material = new THREE.PointsMaterial({
   size: 3,
   color: 0x000000,
   transparent: true,
-  opacity: 1,
+  opacity: 0.85,
   blending: THREE.AdditiveBlending,
   depthWrite: false
 });
