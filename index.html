@@ -10,21 +10,21 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
 
-    <!-- Bootstrap Icons -->
+    <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- DaisyUI -->
+    <!-- DAISYUI -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Script -->
+    <!-- SCRIPT -->
     <script src="./script.js" defer></script>
 
-    <!-- Three.js -->
+    <!-- THREE.JS -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 
-    <!-- MediaPipe hands tracking -->
+    <!-- MEDIAPIPE HANDS TRACKING -->
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
@@ -32,39 +32,38 @@
 
 <body>
     <main>
-        <!-- Three.js canvas -->
-        <canvas id="three-canvas" class="fixed inset-0 z-0 pointer-events-none"></canvas>
-
-        <!-- Top container -->
+        <!-- TOP CONTAINER -->
         <div class="fixed top-0 left-0 w-full h-auto px-8 py-6 flex flex-row justify-between items-start z-50">
             <!-- Camera with hands tracking -->
             <div id="camera-container" class="relative w-[150px] h-[113px] lg:w-[300px] lg:h-[225px] rounded-2xl border-2 lg:border-3 bg-black overflow-hidden">
                 <video class="absolute inset-0 w-full h-full object-cover -scale-x-100" autoplay playsinline muted></video>
                 <canvas class="absolute inset-0 w-full h-full object-cover pointer-events-none"></canvas>
             </div>
-
             <!-- Toggle mode button -->
             <label class="swap swap-rotate">
-                <input id="theme-toggle" type="checkbox" class="theme-controller" value="black" />
+                <input type="checkbox" class="theme-controller" value="black" />
                 <i class="bi bi-sun-fill swap-on"></i>
                 <i class="bi bi-moon-stars-fill swap-off"></i>
             </label>
         </div>
 
-        <!-- Bottom container -->
-        <div class="fixed left-0 bottom-0 w-full h-auto px-8 py-6 flex flex-row justify-between items-center z-50">
-            <!-- GitHub link -->
+        <!-- THREE.JS CANVAS -->
+        <canvas id="three-canvas" class="fixed inset-0 z-0 pointer-events-none"></canvas>
+
+        <!-- BOTTOM CONTAINER -->
+        <div class="fixed left-0  bottom-0 w-full h-auto px-8 py-6 flex flex-row justify-between items-center">
+            <!-- GITHUB LINK -->
             <a class="tooltip tooltip-right" data-tip="Click to visit the GitHub repository." href="https://github.com/fchavonet/creative_coding-hand_particles" target="_blank">
                 <img src="https://img.shields.io/github/stars/fchavonet/creative_coding-hand_particles?style=social&label=GitHub%20Stars" alt="GitHub Stars">
             </a>
 
-            <!-- Portfolio link -->
+            <!-- PORTFOLIO LINK -->
             <a class="link link-hover text-xs" href="https://www.fchavonet.dev" target="_blank">
                 www.fchavonet.dev
             </a>
         </div>
 
-        <!-- Responsive Warning -->
+        <!-- RESPONSIVE WARNING -->
         <dialog id="responsive-warning" class="modal backdrop-blur-xl">
             <div class="modal-box max-w-xs flex flex-col justify-center items-center gap-4 text-center rounded-xl bg-base-300">
                 <i class="bi bi-aspect-ratio text-4xl"></i>
